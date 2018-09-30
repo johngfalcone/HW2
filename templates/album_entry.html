@@ -1,0 +1,12 @@
+  <html>
+  <h1>Welcome to the Album Rater!</h1>
+  <form method="POST" action="http://localhost:5000/album_result">
+      {{ form.hidden_tag() }}
+      {% for message in get_flashed_messages() %}
+      {{ message }}
+      {% endfor %}
+      <p>{{ form.name.label }}{{ form.name() }}</p>
+      <p>{{ form.rank.label }}{{ form.rank() }}</p>
+      {{ form.submit() }}
+  </form>
+  </html>
